@@ -1,0 +1,27 @@
+{
+  "name": "medtracker",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "nodemon server.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.18.2",
+    "crypto-js": "^3.1.9-1",
+    "dotenv": "^5.0.0",
+    "express": "^4.16.2",
+    "jsonwebtoken": "^8.1.1",
+    "mongoose": "^5.0.3",
+    "morgan": "^1.9.0",
+    "node-onesignal": "^0.3.1",
+    "node-pushnotifications": "^1.0.18"
+  },
+  "devDependencies": {
+    "eslint-config-rallycoding": "^3.2.0",
+    "nodemon": "^1.14.12"
+  }
+}
