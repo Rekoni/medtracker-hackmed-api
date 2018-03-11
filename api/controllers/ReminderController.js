@@ -1,4 +1,6 @@
-const smsHelpers = require('./api/helpers/SmsHelpers.js');
+const smsHelpers = require('../helpers/SmsHelpers.js');
 
-
-smsHelpers.sendMessage('447468898220', "Nexmo works yaay!");
+exports.addPrescription = (req, res) => {
+  // const { }
+  // smsHelpers.sendMessage(,);
+}

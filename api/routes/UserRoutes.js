@@ -1,7 +1,7 @@
 require('dotenv/config');
 const bodyParser = require('body-parser');
 const authenticationController = require('../controllers/User/AuthenticationController');
-
+const reminderController = require('../controllers/ReminderController.js');
 
 module.exports = (app) => {
   app.use(bodyParser.urlencoded({ extended: false }));
@@ -22,5 +22,7 @@ module.exports = (app) => {
 
   app.post('/testLogin', authenticationController.authenticate,
     authenticationController.testLogin);
+
+  app.post('/addpres', reminderController.addPrescription);
 
 };

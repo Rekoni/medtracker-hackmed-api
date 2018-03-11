@@ -26,6 +26,7 @@ exports.login = (req, res) => {
         if (err || !user) {
             return res.send({ error: true, message: err || "Could not find user!" });
         }
+      req.session.user = user;
       return res.send(resHelpers.ok("User logged in!"));
     });
     dbHelpers.cleanupSessions();
