@@ -84,6 +84,7 @@ exports.authenticate = (req, res, next) => {
                         return res.send(resHelpers.error(err || "Could not find user!"));
                     }
                     req.body.user = user;
+                    alert("BUNAP");
                     next();
                 });
             });
