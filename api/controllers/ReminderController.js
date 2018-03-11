@@ -3,8 +3,9 @@ const prescription = require('../models/Prescription.js');
 const user = require('../models/User.js');
 
 exports.addPrescription = (req, res) => {
-   const { token, presName, startDate, endDate, frequency, reminder } = req.body;
-   const prescription = new Prescription({ token, presName,
+   const { user, presName, startDate, endDate, frequency, reminder } = req.body;
+   console.log(user);
+   const prescription = new Prescription({ presName,
                                    startDate, endDate, frequency, reminder });
    user.prescriptionList.push(prescription);
    User.updateOne({ email: user.email },
