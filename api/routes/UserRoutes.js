@@ -23,6 +23,7 @@ module.exports = (app) => {
   app.post('/testLogin', authenticationController.authenticate,
     authenticationController.testLogin);
 
-  app.post('/addpres', reminderController.addPrescription);
+  app.post('/addpres', authenticationController.authenticate,
+    reminderController.addPrescription);
 
 };
