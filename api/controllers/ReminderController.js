@@ -1,7 +1,8 @@
 const smsHelpers = require('../helpers/SmsHelpers.js');
 
 exports.addPrescription = (req, res) => {
-   const { user } = req.body.user;
-   res.send(resHelpers.ok(user));
+   const { token } = req.body.token;
+
+
   // smsHelpers.sendMessage(,);
 }

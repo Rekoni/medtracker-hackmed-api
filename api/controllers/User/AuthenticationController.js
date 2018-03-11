@@ -84,7 +84,6 @@ exports.authenticate = (req, res, next) => {
                         return res.send(resHelpers.error(err || "Could not find user!"));
                     }
                     req.body.user = user;
-                    alert("BUNAP");
                     next();
                 });
             });
@@ -96,6 +95,7 @@ exports.authenticate = (req, res, next) => {
 
 exports.logout = (req, res) => {
     const token = req.body.token;
+    
     Session.findOne({ token }, (err, session) => {
         if (err) {
             res.send(resHelpers.error(err));
