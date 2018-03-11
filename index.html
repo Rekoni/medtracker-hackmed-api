@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8"/>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" href="logo.png">
+    <title>Medtracker</title>
+  </head>
+
+  <body>
+    <script>
+    localStorage.setItem("userType", null);
+    </script>
+    <script src="serverScripts.js"></script>
+    <nav>
+
+      <div class="header_image">
+        <img src="MedTracker.png" alt="Website logo and title" width="100%">
+      </div>
+
+
+    </nav>
+
+
+
+    <div class ="left-pane">
+        <div class = "titles">Login</div>
+        <br><input type="text" id="uName" placeholder="Email" class="textbox"><br>
+        <br><input type="password" id="pass" placeholder="Password" class="textbox"><br>
+        <br>
+        <button type="Button" class="pButton" onclick="loginClick()">
+          Login
+        </button>
+    </div>
+
+    <div class ="right-pane">
+      <!--The right pane holds the signup form-->
+      <div class = "titles">Sign up</div>
+      <br><input type="text" id="sEmail" placeholder="Email" class="textbox"><br>
+      <br><input type="text" id="sPhoneNumber" placeholder="Phone number" class="textbox"><br>
+      <br><input type="password" id="sPass" placeholder="Password" class="textbox"><br>
+      <br><input type="password" id="sPassCon" placeholder="Confirm Password" class="textbox"><br>
+
+      <br>
+      <button type="button" class="yButton" onclick="signupClick()">
+        Sign Up
+      </button>
+    </div>
+
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+
+  </body>
+
+  <footer>
+    <p>Developed by Team Kilburners, The University of Manchester</p>
+  </footer>
+
+</html>

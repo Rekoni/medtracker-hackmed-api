@@ -1,0 +1,375 @@
+html {
+  background: #D8D8D8;
+}
+
+a {
+  color: whitesmoke;
+  text-decoration: none;
+  font: garamond;
+}
+
+a:hover {
+  color: black;
+}
+
+.titles {
+  margin-top: 10px;
+  margin-bottom: 0px;
+  padding-bottom: 0px;
+  font-size: 25px;
+  font-variant: small-caps;
+  font-weight: bold;
+}
+
+p {
+  margin-top: 0px;
+  text-align: left;
+}
+
+body {
+  background-color: white;
+  margin-top: 2%;
+  margin-left: 5%;
+  margin-right: 5%;
+  margin-bottom: 5%;
+  font-family: arial;
+  padding-bottom: 40px;
+  padding-top: 10px;
+  border-radius: 15px;
+}
+
+.flex-container {
+  padding-top: 5px;
+  list-style: none;
+  margin-left: 10%;
+  margin-right: 10%;
+  margin-top: 0px;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-around;
+  background: DarkCyan;
+  border-radius: 5px;
+}
+
+.flex-item {
+  background: DarkCyan;
+  padding: 0px;
+  width: 100px;
+  height: 30px;
+  margin-top: 5px;
+  margin-bottom: 0px;
+  color: whitesmoke;
+  font-weight: bold;
+  font-size: 100%;
+  text-align: center;
+  font-variant: small-caps;
+}
+
+.flex-item:hover {
+  color: black;
+
+}
+
+.header_image {
+  align-content: center;
+  margin-left: 10%;
+  margin-right: 10%;
+  margin-bottom: 15px;
+  margin-top: 15px;
+}
+
+.sm-left-pane {
+  position: absolute;
+  left: 14%;
+  width: 25%;
+  text-align: center;
+}
+
+.lb-pane {
+  background-color: DarkCyan;
+  padding: 20px;
+  color: whitesmoke;
+}
+
+.right-pane {
+  margin-left: 50%;
+  padding-top: 15px;
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-bottom: 40px;
+  background-color: DarkCyan;
+  color: whitesmoke;
+  margin-right: 10%;
+  text-align: center;
+  border-radius: 15px;
+}
+
+.left-pane {
+  position: absolute;
+  left: 14%;
+  width: 30%;
+  text-align: center;
+  border-radius: 15px;
+  padding-bottom: 40px;
+  padding-top: 15px;
+  background-color: Yellow;
+}
+
+.right-about {
+  margin-left: 50%;
+  padding-top: 10px;
+  padding-left: 10px;
+  padding-right: 10px;
+  padding-bottom: 20px;
+  background-color: DarkCyan;
+  color: whitesmoke;
+  margin-right: 10%;
+  text-align: left;
+  border-radius: 15px;
+}
+.left-about {
+  position: absolute;
+  padding-top: 10px;
+  padding-left: 10px;
+  padding-right: 10px;
+  padding-bottom: 20px;
+  left: 14%;
+  width: 30%;
+  text-align: left;
+  border-radius: 15px;
+  background-color: Yellow;
+
+}
+
+.ex-right-pane {
+  margin-left: 40%;
+  padding-top: 20px;
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-bottom: 80px;
+  background-color: DarkCyan;
+  color: whitesmoke;
+  margin-right: 5%;
+  text-align: center;
+}
+
+footer {
+  padding-left: 50px;
+  position:absolute;
+  height: 40px;
+  margin-bottom: 0px;
+}
+
+button {
+  border-radius: 5px;
+  font-size: 20px;
+  cursor: pointer;
+  font-weight: bold;
+  width: 50%;
+  text-align: center;
+  padding-top: 2px;
+  padding-bottom: 2px;
+}
+.textbox {
+  height: 32px;
+  font-size: 16px;
+  border-radius: 10px;
+  width: 70%;
+}
+
+select {
+  height: 30px;
+  font-size: 16px;
+  width: 40%;
+}
+
+.pButton {
+  background-color: DarkCyan;
+  color: white;
+}
+
+.yButton {
+  background-color: Yellow;
+}
+
+
+/* stuff to make the form nice */
+  .container {
+    border-radius: 5px;
+    background-color: #f2f2f2;
+    padding: 20px;
+    margin-left: 90px;
+    margin-right: 90px;
+  }
+
+    .col-25 {
+      float: left;
+      width: 25%;
+      margin-top: 6px;
+      text-align: right;
+  }
+
+    .col-75 {
+      float: left;
+      width: 75%;
+      margin-top: 6px;
+  }
+
+
+
+  /* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+@media (max-width: 600px) {
+  .col-25, .col-75, input[type=submit] {
+    width: 100%;
+    margin-top: 0;
+    text-align: left; } }
+
+{ box-sizing: border-box; }
+
+.container input[type=text], select, textarea{
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  resize: vertical;
+}
+
+.container input[type=number], select, textarea{
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  resize: vertical;
+}
+
+.container input[type=datetime-local], select, textarea{
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  resize: vertical;
+}
+
+.container input[type=time], select, textarea{
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  resize: vertical;
+}
+
+.container input[type=date], select, textarea{
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  resize: vertical;
+}
+
+ .container select {
+   width: 100%;
+   height: 150%;
+   border: none;
+   border-radius: 4px;
+   background-color: white;
+ }
+
+.container label {
+   padding: 12px 12px 12px 0;
+   display: inline-block;
+ }
+
+.container input[type=submit] {
+  background-color: #2694a0;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  float: right;
+}
+
+.container input[type=submit]:hover {
+  background-color: #2694a0;
+}
+
+.container {
+  background-color: DarkCyan;
+}
+
+
+/* dropdown menu css*/
+
+/* Dropdown Button */
+.dropbtn {
+  background: DarkCyan;
+  padding: 0px;
+  width: 100px;
+  height: 30px;
+  margin-top: 5px;
+  margin-bottom: 0px;
+  color: whitesmoke;
+  font-weight: bold;
+  font-size: 100%;
+  text-align: center;
+  font-variant: small-caps;
+}
+
+/* Dropdown button on hover & focus */
+.dropbtn:hover, .dropbtn:focus {
+   color: black;
+}
+
+/* The container <div> - needed to position the dropdown content */
+
+
+.dropdown button{
+  border: none;
+  outline: none;
+  font-size: 100%;
+  cursor: pointer;
+  font-weight: bold;
+  width: 100%;
+  text-align: center;
+  padding-top: 0px;
+  margin-top: -5px;
+  margin-bottom: 5px;
+}
+
+/* Dropdown Content (Hidden by Default) */
+.dropdown-content {
+   display: none;
+   font-variant: normal;
+   font-weight: normal;
+   text-align: left;
+   position: absolute;
+   background-color: #f1f1f1;
+   min-width: 160px;
+   box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+   z-index: 1;
+}
+
+/* Links inside the dropdown */
+.dropdown-content a {
+   color: black;
+   padding: 12px 16px;
+   text-decoration: none;
+   display: block;
+}
+
+/* Change color of dropdown links on hover */
+.dropdown-content a:hover {background-color: #ddd}
+
+/* Show the dropdown menu (use JS to add this class to the .dropdown-content container when the user clicks on the dropdown button) */
+.show {display:block;}
