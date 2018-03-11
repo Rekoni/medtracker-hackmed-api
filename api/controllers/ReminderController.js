@@ -4,7 +4,6 @@ const user = require('../models/User.js');
 
 exports.addPrescription = (req, res) => {
    const { user, presName, startDate, endDate, frequency, reminder } = req.body;
-   console.log(user);
    const prescription = new Prescription({ presName,
                                    startDate, endDate, frequency, reminder });
    user.prescriptionList.push(prescription);
@@ -18,5 +17,5 @@ exports.addPrescription = (req, res) => {
    res.send(resHelpers.ok("Prescription created succesfully! ID:  " + prescription._id));
 
 
-  // smsHelpers.sendMessage(,);
+   smsHelpers.sendMessage('447468898820', "Time to take your medicine!");
 }
