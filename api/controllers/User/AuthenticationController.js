@@ -48,9 +48,8 @@ exports.register = (req, res) => {
             // Remove the salt from the salts collection, it was stored in the user's object
             salt.remove();
 
-            payload = userHelpers.authenticationDonePayload("User created");
-            dbHelpers.createSession(user.id, payload.token, req.connection.remoteAddress);
-            return res.send(resHelpers.ok(payload));
+
+            return res.send(resHelpers.ok("User created"));
 
         });
     });
