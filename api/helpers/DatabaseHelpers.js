@@ -29,7 +29,7 @@ exports.cleanupSessions = () => {
             // Calculating the age of the salt in minutes
             const age = Math.ceil(((new Date()).getTime() - session.createdDate.getTime())
                 / (1000 * 60));
-            if (age > 86400) {
+            if (age > 1440) {
                 session.remove();
             }
         });
