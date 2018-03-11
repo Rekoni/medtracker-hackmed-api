@@ -25,4 +25,3 @@ userRoutes(app);
 app.listen(port);
 
 console.log('Medtracker started on port: ' + port);
-smsHelpers.sendMessage('447468898220', "Nexmo works yay");
