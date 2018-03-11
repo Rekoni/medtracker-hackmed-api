@@ -92,10 +92,6 @@ exports.authenticate = (req, res, next) => {
     }
 };
 
-exports.resetPassword = (req, res) => {
-    res.send(resHelpers.notImplemented());
-};
-
 exports.logout = (req, res) => {
     const token = req.body.token;
     Session.findOne({ token }, (err, session) => {
