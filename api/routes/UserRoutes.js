@@ -1,7 +1,7 @@
 require('dotenv/config');
 const bodyParser = require('body-parser');
 const authenticationController = require('../controllers/User/AuthenticationController');
-const userDataController = require('../controllers/User/UserDataController');
+
 
 module.exports = (app) => {
   app.use(bodyParser.urlencoded({ extended: false }));
