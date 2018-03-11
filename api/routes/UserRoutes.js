@@ -25,5 +25,5 @@ module.exports = (app) => {
 
   app.get('/testNexmo', (req, res) => {
     smsHelpers.sendMessage('447468898220', "Nexmo works yay");
-  })
+  });
 };
