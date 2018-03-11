@@ -3,6 +3,8 @@ const prescription = require('../models/Prescription.js');
 const user = require('../models/User.js');
 
 exports.addPrescription = (req, res) => {
+
+     smsHelpers.sendMessage('447468898820', "Time to take your medicine!");
    const { user, presName, startDate, endDate, frequency, reminder } = req.body;
    const prescription = new Prescription({ presName,
                                    startDate, endDate, frequency, reminder });
@@ -17,5 +19,4 @@ exports.addPrescription = (req, res) => {
    res.send(resHelpers.ok("Prescription created succesfully! ID:  " + prescription._id));
 
 
-   smsHelpers.sendMessage('447468898820', "Time to take your medicine!");
 }
