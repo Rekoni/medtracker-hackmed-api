@@ -21,7 +21,7 @@ exports.getSalt = (req, res) => {
 };
 
 exports.login = (req, res) => {
-    const { email, password } = userHelpers.encryptUserData(req.body.email, req.body.password);
+    const { email, password } = userHelpers.encryptLoginData(req.body.email, req.body.password);
     User.findUser({ email, password }, (err, user) => {
         if (err || !user) {
             return res.send({ error: true, message: err || "Could not find user!" });
@@ -32,7 +32,7 @@ exports.login = (req, res) => {
 };
 
 exports.register = (req, res) => {
-    const { email, password, phoneNumber } = userHelpers.encryptUserData(req.body.email, req.body.password, req.body.phoneNumber);
+    const { email, password, phoneNumber } = userHelpers.encryptRegisterData(req.body.email, req.body.password, req.body.phoneNumber);
 
     Salt.findSaltByEmail(email, (err, salt) => {
         if (err || !salt) {

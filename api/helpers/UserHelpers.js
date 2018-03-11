@@ -3,13 +3,18 @@
 const JWT = require('jsonwebtoken');
 const CryptoJS = require("crypto-js");
 
-exports.encryptUserData = (email, password, phoneNumber) => {
+exports.encryptRegisterData = (email, password, phoneNumber) => {
     email = this.encryptEmail(email);
     password = this.encryptPassword(password);
     phoneNumber = this.encrypt(phoneNumber);
     return { email, password, phoneNumber };
 };
 
+exports.encryptLoginData = (email, password) => {
+    email = this.encryptEmail(email);
+    password = this.encryptPassword(password);
+    return { email, password };
+};
 exports.encryptEmail = (email) => {
     email = CryptoJS.MD5(email).toString(CryptoJS.enc.Base64);
     return email;
