@@ -5,7 +5,7 @@ const Session = require('../../models/Session');
 const dbHelpers = require('../../helpers/DatabaseHelpers');
 const resHelpers = require('../../helpers/ResponseHelpers');
 const userHelpers = require('../../helpers/UserHelpers');
-var session = require('express-session');
+// var session = require('express-session');
 
 exports.getSalt = (req, res) => {
     const email = userHelpers.encryptEmail(req.body.email);
