@@ -25,3 +25,4 @@ userRoutes(app);
 app.listen(port);
 
 console.log('Medtracker started on port: ' + port);
+  
