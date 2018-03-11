@@ -26,14 +26,14 @@ exports.login = (req, res) => {
         if (err || !user) {
             return res.send({ error: true, message: err || "Could not find user!" });
         }
-      return ;
+      return res.send(resHelpers.ok("User logged in!"));
     });
     dbHelpers.cleanupSessions();
 };
 
 exports.register = (req, res) => {
-    const { email, password } = userHelpers.encryptUserData(req.body.email, req.body.password);
-    const phoneNumber = req.body.phoneNumber;
+    const { email, password, phoneNumber } = userHelpers.encryptUserData(req.body.email, req.body.password, req.body.phoneNumber);
+
     Salt.findSaltByEmail(email, (err, salt) => {
         if (err || !salt) {
             return res.send(resHelpers.error("Could not register!"));
