@@ -16,7 +16,7 @@ const UserSchema = new Schema({
   personalSalt: {
     type: String
   },
-  personalisedItems: [],
+  prescriptionList: [],
   Created_date: {
     type: Date,
     default: Date.now

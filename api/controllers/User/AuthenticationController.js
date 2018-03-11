@@ -69,19 +69,19 @@ exports.authenticate = (req, res, next) => {
         // Verify token
         JWT.verify(token, process.env.TOKEN_KEY, (err, decoded) => {
             if (err) {
-                return res.send(resHelpers.error("Could not find user!"));
+                return res.send(resHelpers.error("Could not find user 1!"));
             }
             req.decoded = decoded;
             // Find the session to check if the sender has the same address
             // as the user of this session
             Session.findOne({ token }, (err, session) => {
                 if (err || session.userAddress !== String(req.connection.remoteAddress)) {
-                    return res.send(resHelpers.error(err || "Could not find user!"));
+                    return res.send(resHelpers.error(err || "Could not find user 2!"));
                 }
                 // Find the user with the session
                 User.findById(session.userId, (err, user) => {
                     if (err || !user) {
-                        return res.send(resHelpers.error(err || "Could not find user!"));
+                        return res.send(resHelpers.error(err || "Could not find user 3!"));
                     }
                     req.body.user = user;
                     next();
@@ -95,7 +95,7 @@ exports.authenticate = (req, res, next) => {
 
 exports.logout = (req, res) => {
     const token = req.body.token;
-    
+
     Session.findOne({ token }, (err, session) => {
         if (err) {
             res.send(resHelpers.error(err));
